@@ -1,0 +1,347 @@
+{
+  "revision_id": "32acfb891e7e457165fab778007c8cc517db4baf12bd85d8c792088529564cbf",
+  "name": "sample",
+  "run_list": [
+    "recipe[sample::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "ark": {
+      "version": "2.0.2",
+      "identifier": "76bdaad0c09253c3b939c3ad5fd8bd2397c65027",
+      "dotted_decimal_identifier": "33422588596228691.55091278205771736.207960567861287",
+      "source": "../ark",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../ark"
+      }
+    },
+    "build-essential": {
+      "version": "8.2.1",
+      "identifier": "4b9d5c72796184085681d3eefd625c90b79530a8",
+      "dotted_decimal_identifier": "21283643636408708.2346915420110178.101776625053864",
+      "source": "../build-essential",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../build-essential"
+      }
+    },
+    "chocolatey": {
+      "version": "3.0.0",
+      "identifier": "fa3d995554cb8665aa4354799f65bef0b23e4042",
+      "dotted_decimal_identifier": "70436472948575110.28616178804563813.209940991852610",
+      "source": "../chocolatey",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../chocolatey"
+      }
+    },
+    "hardening": {
+      "version": "0.1.0",
+      "identifier": "6214afbf255eb886c573cc6ab075c46119fa1cd0",
+      "dotted_decimal_identifier": "27607292776373944.37934748020682869.215921326693584",
+      "source": "../hardening",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../hardening"
+      }
+    },
+    "java_corretto": {
+      "version": "0.1.0",
+      "identifier": "45798d473e917cdaef9d444158bca9ed932ea5d7",
+      "dotted_decimal_identifier": "19555421085667708.61625003656960188.186837841651159",
+      "source": "../java_corretto",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "b230e64ba81db81f0ccc32b99d0e50c35bc6ff6b",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../java_corretto"
+      }
+    },
+    "mingw": {
+      "version": "2.1.5",
+      "identifier": "685837677b1b865451e3c3122ae103b296c01517",
+      "dotted_decimal_identifier": "29370392560475014.23733936715868897.4065568232727",
+      "source": "../mingw",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../mingw"
+      }
+    },
+    "nodejs": {
+      "version": "10.1.4",
+      "identifier": "c237f53b5b9c7d07b7ea4965166b0c8f0d39e374",
+      "dotted_decimal_identifier": "54667671884242045.2172541718566507.13808541754228",
+      "source": "../nodejs",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../nodejs"
+      }
+    },
+    "os-hardening": {
+      "version": "4.0.0",
+      "identifier": "e20b98be94004b4013698889ce3ce232f88fbb27",
+      "dotted_decimal_identifier": "63626095396913227.18035742492708412.248708546411303",
+      "source": "../os-hardening",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../os-hardening"
+      }
+    },
+    "sample": {
+      "version": "0.1.0",
+      "identifier": "34c87f1d0a82b8332851a4a32c0f83895bf802fb",
+      "dotted_decimal_identifier": "14857147062583992.14399554931862543.144625976738555",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "412aff710f987570d5130995d01b99f0100b48da",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    },
+    "seven_zip": {
+      "version": "4.2.6",
+      "identifier": "4c25f7d813795a24e67a93c13336b5bb661b7d0a",
+      "dotted_decimal_identifier": "21433844642314586.10386513300894518.199816476589322",
+      "source": "../seven_zip",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../seven_zip"
+      }
+    },
+    "windows": {
+      "version": "7.0.2",
+      "identifier": "d30610e83214a12feb3f8c2fe67d24ff7f42fa8e",
+      "dotted_decimal_identifier": "59397889770788001.13487982072817277.40679770356366",
+      "source": "../windows",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../windows"
+      }
+    },
+    "windows-hardening": {
+      "version": "0.9.1",
+      "identifier": "fb514509b65b7fa504bdf236ec6ece70d9657452",
+      "dotted_decimal_identifier": "70739576111913855.46448585016274030.226984078963794",
+      "source": "../windows-hardening",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../windows-hardening"
+      }
+    },
+    "windows-security-policy": {
+      "version": "0.3.9",
+      "identifier": "b2e3ba1e3ced20a311a7903a59c8198183a82ec7",
+      "dotted_decimal_identifier": "50352934365228320.45899832580790728.28044050312903",
+      "source": "../windows-security-policy",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../windows-security-policy"
+      }
+    },
+    "yum": {
+      "version": "7.4.6",
+      "identifier": "d5693e7c05317dd99c31d151c5817ea034ea581d",
+      "dotted_decimal_identifier": "60069887128973693.61251807725340033.139226547640349",
+      "source": "../yum",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "../yum"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "ark",
+        "= 2.0.2"
+      ],
+      [
+        "build-essential",
+        "= 8.2.1"
+      ],
+      [
+        "chocolatey",
+        "= 3.0.0"
+      ],
+      [
+        "hardening",
+        "= 0.1.0"
+      ],
+      [
+        "java_corretto",
+        "= 0.1.0"
+      ],
+      [
+        "mingw",
+        "= 2.1.5"
+      ],
+      [
+        "nodejs",
+        "= 10.1.4"
+      ],
+      [
+        "os-hardening",
+        "= 4.0.0"
+      ],
+      [
+        "sample",
+        ">= 0.0.0"
+      ],
+      [
+        "seven_zip",
+        "= 4.2.6"
+      ],
+      [
+        "windows",
+        "= 7.0.2"
+      ],
+      [
+        "windows-hardening",
+        "= 0.9.1"
+      ],
+      [
+        "windows-security-policy",
+        "= 0.3.9"
+      ],
+      [
+        "yum",
+        "= 7.4.6"
+      ]
+    ],
+    "dependencies": {
+      "ark (2.0.2)": [
+        [
+          "build-essential",
+          ">= 0.0.0"
+        ],
+        [
+          "windows",
+          ">= 0.0.0"
+        ],
+        [
+          "seven_zip",
+          ">= 0.0.0"
+        ]
+      ],
+      "build-essential (8.2.1)": [
+        [
+          "seven_zip",
+          ">= 0.0.0"
+        ],
+        [
+          "mingw",
+          ">= 1.1.0"
+        ]
+      ],
+      "chocolatey (3.0.0)": [
+
+      ],
+      "hardening (0.1.0)": [
+        [
+          "os-hardening",
+          ">= 0.0.0"
+        ],
+        [
+          "windows-hardening",
+          ">= 0.0.0"
+        ]
+      ],
+      "java_corretto (0.1.0)": [
+
+      ],
+      "mingw (2.1.5)": [
+        [
+          "seven_zip",
+          ">= 0.0.0"
+        ]
+      ],
+      "nodejs (10.1.4)": [
+        [
+          "ark",
+          ">= 2.0.2"
+        ],
+        [
+          "chocolatey",
+          ">= 3.0.0"
+        ],
+        [
+          "yum",
+          ">= 7.2.0"
+        ]
+      ],
+      "os-hardening (4.0.0)": [
+
+      ],
+      "sample (0.1.0)": [
+        [
+          "hardening",
+          ">= 0.0.0"
+        ],
+        [
+          "java_corretto",
+          ">= 0.0.0"
+        ],
+        [
+          "nodejs",
+          ">= 0.0.0"
+        ]
+      ],
+      "seven_zip (4.2.6)": [
+
+      ],
+      "windows (7.0.2)": [
+
+      ],
+      "windows-hardening (0.9.1)": [
+        [
+          "windows-security-policy",
+          ">= 0.0.0"
+        ]
+      ],
+      "windows-security-policy (0.3.9)": [
+
+      ],
+      "yum (7.4.6)": [
+
+      ]
+    }
+  }
+}
