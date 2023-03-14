@@ -1,0 +1,48 @@
+docker build -t jenkins:jcasc .
+
+docker run --name jenkins -itd -p 8080:8080 --env JENKINS_ADMIN_ID=admin --env JENKINS_ADMIN_PASSWORD=password jenkins:jcasc
+
+docker run --name jenkins --rm  -p 443:8443 -v $volume_base:/var/jenkins_home --env JENKINS_ADMIN_ID=$JENKINS_INITIAL_ADMIN_NAME --env JENKINS_ADMIN_PASSWORD="$psswrd" jenkins:jcasc --httpPort=-1 --httpsPort=8443 --httpsKeyStore=/usr/share/jenkins/ref/jenkins_keystore.jks --httpsKeyStorePassword="$keytore_pass"
+
+docker run -e mac=$(ip link show eth0 | awk '/ether/ {print $2}') alpine env
+
+docker inspect <container name or id> |grep MacAddress|tr -d ' ,"'|sort -u
+
+ipconfig /all |find 'Physical Address'| Select -First 2| Select -Last 1
+ifconfig eth0 | awk '/ether/ {print $2}'
+
+apt-get install apt-file
+apt-file search --regexp 'bin/ip$' //to search for which ip route is being used
+apt install -y iproute2
+
+--mac-address="ipconfig /all |find 'Physical Address'| Select -First 2| Select -Last 1"
+--mac-address="(Get-NetAdapter -name "vEthernet (Default Switch)").macaddress"
+02:42:ac:11:00:02
+--mac-address="00-15-5D-51-BE-A2"
+-v jenkinsvol1:/var/jenkins_home
+-v /var/run/docker.sock:/var/run/docker.sock  //Mounts the local docker daemon socket to the Jenkins container
+–-privileged                                   //Escalates the container permissions so it can launch containers on the host docker daemon
+-p 50000:50000                                //Port forwarding of the default JNLP agent port to our localhost
+
+docker image prune -a
+
+### Working
+docker build --progress=plain -t jenkins:jcasc .
+(Get-NetAdapter -name "vEthernet (Default Switch)").macaddress //get host IP
+docker run --name jenkins --mac-address="00-15-5D-51-BE-A2" -itd -p 8080:8080 --env JENKINS_ADMIN_ID=admin --env JENKINS_ADMIN_PASSWORD=admin jenkins:jcasc
+docker inspect jenkins|Select-String "mac"
+docker run -itd --name jenkins --mac-address="00-15-5D-51-BE-A2" -p 8080:8080 -p 50000:50000 --restart=always --network bridge -v jenkinsvol1:/var/jenkins_home -v //var/run/docker.sock:/var/run/docker.sock --privileged --log-opt max-size=5k --log-opt max-file=3 -e Timer_IntervalSeconds=1 --env JENKINS_ADMIN_ID=admin --env JENKINS_ADMIN_PASSWORD=admin jenkins:jcasc
+
+docker run -itd --name jenkins --mac-address="00-15-5D-51-BE-A2" -p 8080:8080 -p 50000:50000 --restart=always --network bridge -v jenkinsvol1:/var/jenkins_home -v //var/run/docker.sock:/var/run/docker.sock -v ${pwd}/logs:/var/log/jenkins/jenkins.log --privileged --log-opt mode=non-blocking --log-opt max-size=5k --log-opt max-file=3 -e Timer_IntervalSeconds=1 --env JENKINS_ADMIN_ID=admin --env JENKINS_ADMIN_PASSWORD=admin jenkins:jcasc
+
+### create local registry
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+docker tag ubuntu:16.04 localhost:5000/my-ubuntu
+docker image remove ubuntu:16.04
+docker push localhost:5000/my-ubuntu
+docker pull localhost:5000/my-ubuntu
+docker container stop registry && docker container rm -v registry
+
+sh "docker tag maven localhost:5000/maven"
+
+/var/lib/jenkins/

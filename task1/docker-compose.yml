@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - "//var/run/docker.sock:/var/run/docker.sock"
+      - "${PWD}/jenkins/logs:/var/jenkins_home/logs"
+    environment:
+      - JENKINS_ADMIN_ID=admin
+      - JENKINS_ADMIN_PASSWORD=admin
+    # command: echo "I'm running ${COMPOSE_PROJECT_NAME}"
+    container_name: my-jenkins
+    mac_address: 00-15-5D-51-BE-A2
+    privileged: true
+    restart: on-failure
+    logging:
+      driver: json-file
+      options:
+        mode: "non-blocking"
+        max-size: "5k"
+        max-file: "3"
+    expose:
+      - "8080"
+    # networks:
+    #   name: bridge
+    #   external: true
+  # networks:
+  #   my-network:
+  #     driver: bridge
+      # attachable: true
