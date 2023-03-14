@@ -1,5 +1,5 @@
 # optum-tasks
-S No	Performance Area(s)	Performance Expectation	Timelines
+
 1	Deploy docker image	o	Setup jenkins in a docker image 
 •	Linux
 •	This image should be built/deployed on an event
